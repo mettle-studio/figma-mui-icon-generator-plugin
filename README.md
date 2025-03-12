@@ -12,8 +12,8 @@ A Figma plugin that converts your icon designs into Material-UI (MUI) compatible
 
 ## Installation
 
-1. Install the plugin from the Figma plugin marketplace
-2. Open your Figma file containing icons
+1. Get this source code
+2. Add a development plugin in Figma, pointing at the `dist` folder manifest file
 
 ## Usage
 
