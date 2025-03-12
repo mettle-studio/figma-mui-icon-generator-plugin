@@ -114,6 +114,7 @@ const getOptimisedSvgPaths = (svgString: string) => {
   // Clean xml paths
   let paths = jsxResult.data
     .replace(/"\/>/g, '" />')
+    .replace(/<([\/]?)SVGChild:(.+?)>/g, "<$1$2>,")
     .replace(/fill-opacity=/g, "fillOpacity=")
     .replace(/xlink:href=/g, "xlinkHref=")
     .replace(/clip-rule=/g, "clipRule=")
@@ -125,10 +126,12 @@ const getOptimisedSvgPaths = (svgString: string) => {
   if (childrenAsArray) {
     const pathsCommaSeparated = paths
       .replace(/key="\d+" \/>/g, "$&,")
-      .replace(/<\/SVGChild:(\w+)>/g, "</$1>,");
+      .split(",")
+      .map((path) => path.trim())
+      .filter((path) => path !== "")
+      .join(",");
     paths = `[${pathsCommaSeparated}]`;
   }
-  paths = paths.replace(/SVGChild:/g, "");
 
   return paths;
 };
