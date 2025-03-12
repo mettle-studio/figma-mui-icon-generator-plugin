@@ -1,0 +1,17 @@
+{
+  "api": "1.0.0",
+  "editorType": [
+    "figma"
+  ],
+  "id": "mui-icon-generator",
+  "name": "MUI Icon Generator",
+  "main": "main.js",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ],
+    "devAllowedDomains": [
+      "*"
+    ]
+  }
+}

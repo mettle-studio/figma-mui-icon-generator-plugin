@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@create-figma-plugin/ui": "^3.2.1",
+    "@create-figma-plugin/utilities": "^3.2.1",
+    "html-entities": "^2.5.2",
+    "plugma": "^1.2.8",
+    "preact": ">=10",
+    "svgo": "^3.3.2"
+  },
+  "devDependencies": {
+    "@create-figma-plugin/build": "^3.2.1",
+    "@create-figma-plugin/tsconfig": "^3.2.1",
+    "@figma/plugin-typings": "1.100.2",
+    "typescript": ">=4"
+  },
+  "scripts": {
+    "dev": "plugma dev",
+    "build": "plugma build",
+    "preview": "plugma preview",
+    "release": "plugma release"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "plugma"
+    ]
+  }
+}
