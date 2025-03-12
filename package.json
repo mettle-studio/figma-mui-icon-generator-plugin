@@ -1,5 +1,6 @@
 {
   "name": "figma-mui-icon-generator-plugin",
+  "version": "0.0.1",
   "dependencies": {
     "@create-figma-plugin/ui": "^3.2.1",
     "@create-figma-plugin/utilities": "^3.2.1",
